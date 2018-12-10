@@ -1,0 +1,14 @@
+<div style=padding-left:210px>
+<h4 style="text-align: center;"> Usuarios de BETSHARE </h4>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let usuario of usuarios$">
+      <a>{{ usuario.name}}</a>
+  
+      <ul>
+        <li class="list-group-item" >{{ usuario.email }}</li>
+        <li class="list-group-item"><a href="https://{{ usuario.website }}"> {{ usuario.website }}</a></li>
+      </ul>
+    </li>
+</ul>
+</div>
