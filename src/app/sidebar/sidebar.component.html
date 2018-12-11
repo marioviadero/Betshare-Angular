@@ -1,38 +1,52 @@
-<nav id="sidebar">
-  <ul>
-    <li class="sub-menu">
-      <a routerLink="">
-        <i class="material-icons">event_note</i> <a> Competiciones</a>
-      </a>
-      <ul class="sub">
-        <li><a routerLink="">Crear Competicion</a></li>
-         <li><a routerLink="">Ver Competiciones</a></li>
-      </ul>
-    </li>
-    <li class="sub-menu">
-      <a routerLink="">
-        <i class="material-icons">calendar_today</i> <a> Eventos</a>
-      </a>
-      <ul class="sub">
-        <li><a routerLink="">Crear Evento</a></li>
-         <li><a routerLink="">Ver Eventos</a></li>
-      </ul>
-    </li>
-    <li class="sub-menu">
-      <a routerLink="">
-        <i class="material-icons">supervised_user_circle</i> <a> Usuarios</a>
-      </a>
-      <ul class="sub">
-         <li><a routerLink="" [class.activated]="currentUrl == '/'">Ver Usuarios</a></li>
-      </ul>
-    </li>
-    <li class="sub-menu">
-      <a routerLink="">
-        <i class="material-icons">score</i> <a> Resultados</a>
-      </a>
-      <ul class="sub">
-        <li><a routerLink="">Actualizar resultados</a></li>
-     </ul>
-    </li>
-  </ul>
-</nav>
+
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav #sidenav class="example-sidenav"  mode="push">      
+          <ul>
+            <li class="sub-menu">
+              <a routerLink="">
+                <i class="material-icons">event_note</i> <a> Competiciones</a>
+              </a>
+              <ul class="sub">
+                <li><a routerLink="">Crear Competicion</a></li>
+                 <li><a routerLink="">Ver Competiciones</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu">
+              <a routerLink="">
+                <i class="material-icons">calendar_today</i> <a> Eventos</a>
+              </a>
+              <ul class="sub">
+                <li><a routerLink="">Crear Evento</a></li>
+                 <li><a routerLink="">Ver Eventos</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu">
+              <a routerLink="">
+                <i class="material-icons">supervised_user_circle</i> <a> Usuarios</a>
+              </a>
+              <ul class="sub">
+                 <li><a routerLink="" [class.activated]="currentUrl == '/'">Ver Usuarios</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu">
+              <a routerLink="">
+                <i class="material-icons">score</i> <a> Resultados</a>
+              </a>
+              <ul class="sub">
+                <li><a routerLink="">Actualizar resultados</a></li>
+             </ul>
+            </li>
+          </ul>       
+      </mat-sidenav>
+    
+      <div class="example-sidenav-content">
+        <button type="button" mat-button (click)="sidenav.open()">
+          <i class="material-icons">
+            line_weight
+            </i>
+        </button>
+      </div>
+    </mat-sidenav-container>
+  
+
+
