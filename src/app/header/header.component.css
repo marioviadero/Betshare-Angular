@@ -1,0 +1,87 @@
+/* Cabecera de Administrador */
+.header, .footer {
+    min-height: 60px;
+    padding: 0 15px;
+}
+ 
+.header {
+    position: relative;
+    left: 0;
+    right: 0;
+    z-index: 1002;
+}
+ 
+.black-bg {
+    background: #ffd777;
+    border-bottom: 1px solid #c9aa5f;
+}   
+/*--Boton activacion barra lateral---*/
+ 
+.sidebar-toggle-box {
+    float: left;
+    padding-right: 15px;
+    margin-top: 20px;
+}
+ 
+.sidebar-toggle-box i {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 20px;
+}
+ 
+ 
+.sidebar-closed > #sidebar > ul {
+    display: none;
+}
+ 
+.sidebar-closed #main-content {
+    margin-left: 0px;
+}
+ 
+.sidebar-closed #sidebar {
+    margin-left: -180px;
+}
+ 
+ 
+/*-- LOGO --*/
+a.logo {
+    font-size: 20px;
+    color: #ffffff;
+    margin-top: 15px;
+    text-transform: uppercase;
+    position: absolute;   
+    left: 50%;
+    margin-right: -50%; 
+    cursor: pointer;
+     
+}
+a.logo b {
+    font-weight: 900;
+}
+ 
+/*-- BOTON DESCONECTARSE --*/
+ 
+/* Hoover y focus*/
+ .logout:hover,  .logout:focus {
+    background: rgba(0,0,0,0) !important;
+    background-color: white !important;
+    color: #68dff0;
+    box-shadow: inset 0 0 0 1px #68dff0;
+    border:1px solid #68dff0 !important
+   
+}
+ 
+/*Propiedades del boton--*/
+ .logout {
+    color: #f2f2f2;
+    font-size: 12px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border: 1px solid #64c3c2 !important;
+    padding: 5px 15px;
+    margin-right: 15px;
+    background: #68dff0;
+    margin-top: 15px;
+    float:right;
+    cursor: pointer;
+}

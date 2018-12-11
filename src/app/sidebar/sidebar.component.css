@@ -11,6 +11,9 @@
 	color: #f2f2f2;
 	font-weight: 700;
 }
+#sidebar{
+    padding-top:10px;
+}
 
 #sidebar ul li {
     position: relative;

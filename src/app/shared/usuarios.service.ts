@@ -12,4 +12,7 @@ export class UsuariosService {
   listaUsuarios() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }
+  getUsuario(userId){
+    return this.http.get('https://jsonplaceholder.typicode.com/users/'+userId)
+  }
 }

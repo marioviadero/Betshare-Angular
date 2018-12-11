@@ -9,13 +9,17 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { UsuarioComponent } from './usuario/usuario.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuariosComponent,
-    SidebarComponent
+    SidebarComponent,
+    UsuarioComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
