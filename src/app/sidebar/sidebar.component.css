@@ -1,12 +1,5 @@
 /*Activación de la barra lateral izquierda*/
 
-#sidebar {
-    width: 210px;
-    height: 100%;
-    position: fixed;
-    background: rgb(45, 45, 151);
-    
-}
 .example-sidenav h5 {
 	color: #f2f2f2;
 	font-weight: 700;
