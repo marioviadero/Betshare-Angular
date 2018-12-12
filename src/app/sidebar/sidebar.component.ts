@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ViewChild } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-
+import { SidebarServiceService } from '../shared/sidebar-service.service';
+import { MatSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,11 +12,33 @@ export class SidebarComponent implements OnInit {
 
   currentUrl: string;
 
-  constructor(private router: Router) {
-    router.events.subscribe((_: NavigationEnd) => this.currentUrl = _.url);
-  }
-  ngOnInit() {
-  }
+
+  @ViewChild('sidenav') sidenav: MatSidenav;
+    constructor(private sidebarService: SidebarServiceService) 
+    {
+
+    }
+
+    ngOnInit() {
+        /**
+        When you reveive order to open / close sidenav.
+        **/
+        this.sidebarService.asObservable().subscribe((isOpen: boolean) => {
+                    if(isOpen) {
+                        this.sidenav.close();
+                    }
+                    else{
+                        this.sidenav.open();
+                    }
+            });
+    }
+
+    onOpenedChange() {
+        this.sidebarService.silenceOpen();
+    }
+    onClosedChange() {
+        this.sidebarService.silenceClose();
+    }
 
   
 }
