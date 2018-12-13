@@ -3,11 +3,11 @@
 
 <ul class="list-group">
     <li class="list-group-item" *ngFor="let usuario of usuarios$">
-      <a routerLink="/usuario/{{usuario.id}}">{{ usuario.name}}</a>
+      <a routerLink="/usuario/{{usuario.id}}">{{ usuario.login}}</a>
   
       <ul>
         <li class="list-group-item" >{{ usuario.email }}</li>
-        <li class="list-group-item"><a href="https://{{ usuario.website }}"> {{ usuario.website }}</a></li>
+        <li class="list-group-item"><a> Es admin: {{ usuario.esAdmin }}</a></li>
       </ul>
     </li>
 </ul>
