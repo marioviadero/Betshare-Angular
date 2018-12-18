@@ -15,7 +15,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { HeaderComponent } from './header/header.component';
+import { LoginComponent } from './login/login.component';
 
+import { LoginService } from './login/login.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { HeaderComponent } from './header/header.component';
     UsuariosComponent,
     SidebarComponent,
     UsuarioComponent,
-    HeaderComponent
+    HeaderComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,7 @@ import { HeaderComponent } from './header/header.component';
     MatSidenavModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [LoginService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

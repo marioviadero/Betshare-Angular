@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs'
+import { Subject } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
 export class SidebarServiceService {
 
-  private menuIsOpen$ : Subject<boolean>;
+  private menuIsOpen$: Subject<boolean>;
     private menuIsOpen: boolean = false;
-    constructor() { 
+    constructor() {
         this.menuIsOpen$ = new Subject<boolean>();
     }
 

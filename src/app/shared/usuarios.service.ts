@@ -12,7 +12,7 @@ export class UsuariosService {
   listaUsuarios() {
     return this.http.get('http://localhost:8080/usuario/lista-usuarios');
   }
-  getUsuario(userId){
-    return this.http.get('http://localhost:8080/usuario/'+userId)
+  getUsuario(userId) {
+    return this.http.get('http://localhost:8080/usuario/' + userId);
   }
 }
