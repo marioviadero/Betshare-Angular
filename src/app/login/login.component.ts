@@ -13,11 +13,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
 
-    this.loginService.login('viadero_live@hotmail', 'mario').subscribe(
-      res => {
-        console.log(res);
-    });
-
   }
   logIn(username: string, password: string, event: Event) {
     event.preventDefault(); // Avoid default action for the submit button of the login form
