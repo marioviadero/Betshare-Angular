@@ -1,7 +1,7 @@
 <div class="container">
   <form class="form-login">
     <h2 class="form-login-heading">Iniciar sesión</h2>
-    <input type="text" class="form-control" placeholder="Username" #username name="username">
+    <input type="text" class="form-control" placeholder="Usuario" #username name="login">
     <input type="password" class="form-control" placeholder="Password" #password name="password">
     <button type="submit" (click)="logIn(username.value, password.value, $event)" class="btn btn-theme btn-block">Login</button>
     <hr>

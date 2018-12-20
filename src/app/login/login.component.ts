@@ -14,11 +14,11 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
 
   }
-  logIn(username: string, password: string, event: Event) {
+  logIn(login: string, password: string, event: Event) {
     event.preventDefault(); // Avoid default action for the submit button of the login form
 
     // Calls service to login user to the api rest
-    this.loginService.login(username, password).subscribe(
+    this.loginService.login(login, password).subscribe(
 
       res => {
        console.log(res);
@@ -28,13 +28,10 @@ export class LoginComponent implements OnInit {
         console.error(error);
       },
 
-      () => this.navigate()
     );
 
   }
 
-  navigate() {
-    this.router.navigateByUrl('/lista-usuarios');
-  }
+ 
 
 }
