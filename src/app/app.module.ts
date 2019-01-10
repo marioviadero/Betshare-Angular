@@ -18,6 +18,7 @@ import { HeaderComponent } from './header/header.component';
 import { LoginComponent } from './login/login.component';
 
 import { LoginService } from './login/login.service';
+import { RegistroComponent } from './registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LoginService } from './login/login.service';
     SidebarComponent,
     UsuarioComponent,
     HeaderComponent,
-    LoginComponent
+    LoginComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,

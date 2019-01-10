@@ -1,0 +1,12 @@
+<div class="container">
+  <form class="form-login">
+    <h2 class="form-login-heading">Registro de Usuario</h2>
+    <input type="text" class="form-control" placeholder="Usuario" #username name="login">
+    <input type="password" class="form-control" placeholder="Password" #password name="password">
+    <input type="password" class="form-control" placeholder="Repetir Password" #repetirpassword name="repetirpassword">
+    <input type="email" class="form-control" placeholder="Email" #email name="email">
+    <input type="date" class="form-control" placeholder="Fecha Nacimiento" #fechaNac name="fechaNac">
+    <button type="submit" (click)="signIn(username.value, password.value,repetirpassword.value,email.value,fechaNac.value, $event)" class="btn btn-theme btn-block">Registrarse</button>    
+  </form>
+</div>
+
